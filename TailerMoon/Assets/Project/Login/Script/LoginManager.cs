@@ -4,7 +4,12 @@ using UnityEngine;
 
 public class LoginManager : MonoBehaviour
 {
-    public void OnClickSignIn() {
+    public void OnClickedGoogleLogin() {
         
     }
+    public void OnClickedAppleLogin() {
+
+    }
+
+
 }
