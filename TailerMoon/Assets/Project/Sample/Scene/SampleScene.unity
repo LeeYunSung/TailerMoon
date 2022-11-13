@@ -1345,7 +1345,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 64860742}
         m_TargetAssemblyTypeName: NetworkManger, Assembly-CSharp
-        m_MethodName: OnClickedServerNnConnect
+        m_MethodName: OnClickedServerNonConnect
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1502,7 +1502,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 596254497}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2ebcebb7b49e464196ccdac47f94f01, type: 3}
+  m_Script: {fileID: 11500000, guid: f56fb1403f24447138e1483ca5136013, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &785931523
@@ -3897,7 +3897,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 64860742}
         m_TargetAssemblyTypeName: NetworkManger, Assembly-CSharp
-        m_MethodName: OnOnClickedConnectLobby
+        m_MethodName: OnClickedConnectLobby
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -11,7 +11,9 @@ namespace Project.Login {
         public void OnClickedAppleLogin() {
 
         }
+        public void OnClickedEmailLogin() {
 
+        }
 
     }
 
