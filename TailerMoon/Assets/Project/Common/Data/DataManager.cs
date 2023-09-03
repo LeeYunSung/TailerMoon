@@ -4,19 +4,30 @@ using UnityEngine;
 
 namespace Project.Common.Data {
 
+    public enum CharacterType{
+        Dog,
+        Pig,
+        Rabbit,
+        Mouse,
+        Cat,
+        Monkey,
+    }
+
     public class UserInfo {
         public string ID { get; protected set; }
         public string Name { get; protected set; }
+        public CharacterType characterType { get; protected set; }
 
-        public UserInfo(string userID, string userName){
+        public UserInfo(string userID, string userName, CharacterType type = CharacterType.Cat){
             ID = userID;
+            Name = userName;
+            characterType = type;
         }
-
     }
 
     public class DataManager : MonoBehaviour {
 
-        static DataManager instance;
+        private static DataManager instance;
 
         public static DataManager Instance {
             get {

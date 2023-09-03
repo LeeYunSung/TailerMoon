@@ -5,18 +5,27 @@ using UnityEngine;
 namespace Project.Common.System {
 
     public enum SceneType {
-        Intro,
-        Login,
-        Lobby,
-        Room,
-        Game
+        IntroScene,
+        LoginScene,
+        LobbyScene,
+        RoomScene,
+        GameScene
     }
 
     public class SceneManager : MonoBehaviour {
-        static SceneManager instance;
-        public static SceneManager Instance{
-            get{
-                if (instance == null) instance = new SceneManager();
+        private static SceneManager instance;
+
+        private void Awake(){
+            if (instance == null){
+                instance = this;
+            }
+        }
+
+        public static SceneManager Instance {
+            get {
+                if (instance == null) {
+                    return null;
+                }
                 return instance;
             }
         }

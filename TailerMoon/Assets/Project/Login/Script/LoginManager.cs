@@ -1,20 +1,31 @@
-using System.Collections;
-using System.Collections.Generic;
+using Photon.Pun;
+using Project.Common.Data;
+using Project.Common.System;
+using TMPro;
 using UnityEngine;
+using Cysharp.Threading.Tasks;
 
 namespace Project.Login {
 
-    public class LoginManager : MonoBehaviour {
+    public class LoginManager : MonoBehaviourPunCallbacks {
+        [SerializeField] private TMP_InputField idInput;
+        [SerializeField] private TMP_InputField nameInput;
+
         public void OnClickedGoogleLogin() {
-
+            UserInfo userInfo = new UserInfo(idInput.text, nameInput.text);
+            PhotonNetwork.ConnectUsingSettings();
         }
-        public void OnClickedAppleLogin() {
 
+        public override void OnConnectedToMaster(){
+            PhotonNetwork.JoinLobby();
+            PhotonNetwork.LocalPlayer.NickName = nameInput.text;
+            SceneManager.Instance.LoadScene(SceneType.LobbyScene);
         }
-        public void OnClickedEmailLogin() {
 
-        }
+        // public void OnClickedAppleLogin() {
+        // }
+        // public void OnClickedEmailLogin() {
+        // }
 
     }
-
 }
